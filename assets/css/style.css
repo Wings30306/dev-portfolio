@@ -1,0 +1,100 @@
+/*  
+    #b5e6fe; light blue
+    #a4c2d1; egg blue
+    #dbdcde; light grey
+    #1f7798; mid-blue
+    #184f63; dark-blue
+*/
+
+/* global styles */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #a4c2d1; /* egg blue */
+}
+
+h1,
+h2 {
+    font-family: "DM Serif Display", serif;
+    color: #184f63; /* dark blue */
+}
+
+/* Header */
+
+#hero {
+    background-color: #dbdcde; /* light grey */
+    background-image: url("../images/background.webp");
+    background-size: cover;
+    background-position: 50% 75%;
+    min-height: 500px;
+    padding: 5% 7%;
+}
+
+/* About section */
+
+#about {
+    background-color: white;
+}
+
+/* Buttons */
+
+.custom-button {
+    background-color: #1f7798;
+    border: #1f7798
+}
+
+.custom-button:hover {
+    background-color: #1d6d8a;
+    border: #1d6d8a
+}
+
+/* portfolio customisations */
+
+#portfolio {
+    background-color: #dbdcde; /* light grey */
+}
+
+#portfolio .card-title {
+    color: #1f7798;
+    font-size: 1.2rem;
+}
+
+/* fixes one portfolio card being too short 
+on md & lg screens due to text formatting */
+#portfolio .card-text {
+    min-height: 120px;
+}
+
+#portfolio .btn:hover {
+    background-color: #1f7798;
+}
+
+/* Contact customisations */
+#contact {
+    background-color: white; 
+}
+
+#contact label {
+    color: #20627b; /* dark blue */
+}
+
+/* Other customisations */
+
+/* Remove bootstrappy curved edges (from buttons, cards, 
+input fields etc) to give site a sharper appearence */
+#portfolio *,
+#contact *,
+#modal-content *,
+.sharp-corners {
+    border-radius: 0;
+}
+
+/* Bootstrap breakpoint for xl screens */
+@media screen and (min-width: 1400px){
+    /* fixes all portfolio cards being too tall on xl screens */
+    #portfolio .card-text {
+        min-height: auto;
+    }
+}
